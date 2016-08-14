@@ -1,12 +1,13 @@
-Copyright © http://randomrise.com, as an published work.  All rights reserved.
-THIS SOFTWARE OR DATA IS THE PROPERTY OF http://randomrise.com.
-THIS SOFTWARE INTENTD TO PROVIDE OPEN SOURCE (FREE TO USE) BUT ANY REPRODUCTION IS NOT ALLOWED.
+## Copyright
+    - Copyright © http://randomrise.com, as an published work.  All rights reserved.
+      This software is the property of randomrise technology
+      This software intend to provide open source (FREE TO USE) but any reproduction is not allowed
 
-@author ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
-@date 13/08/2016
-@version 0.0.5
-
-CONTACT: http://randomrise.com 
+      @contact: http://randomrise.com 
+      @author ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
+      @github: https://github.com/chandragithub/xssescape
+      @date 13/08/2016
+      @version 0.0.6 (beta)
  
 ## Description: 
    It prevents cross site scripting (xss) attacts across the browser.
