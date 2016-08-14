@@ -6,7 +6,7 @@
  *
  * @author ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
  * @date 13/08/2016
- * @version 0.0.7 (beta)
+ * @version 0.0.9 (beta)
  */
 
 var xssescape = (function () 
@@ -44,12 +44,12 @@ var xssescape = (function ()
           .replace(/'/g, '&#39;')
           .replace(/</g, '&lt;')
           .replace(/>/g, '&gt;')
-          .replace(/%/g, '&#37;')
-          .replace(/;/g, '&#59;')
-          .replace(/(/g, '&#40;')
-          .replace(/)/g, '&#41;')
-          .replace(/+/g, '&#43;')
-          .replace(/-/g, '&#45;');
+          .replace(/\%/g, '&#37;')
+          .replace(/\;/g, '&#59;')
+          .replace(/\(/g, '&#40;')
+          .replace(/\)/g, '&#41;')
+          .replace(/\+/g, '&#43;')
+          .replace(/\-/g, '&#45;');
        } 
     };
     
@@ -107,9 +107,9 @@ var xssescape = (function ()
        }
     };
     
-    xssescape.removeStrictUnsafe = function()
+    xssescape.removeStrictUnsafe = function(htmlStr)
     {
-        if (htmlStr === undefined) 
+       if (htmlStr === undefined) 
        {
           return null;
        }
@@ -121,12 +121,12 @@ var xssescape = (function ()
           .replace(/'/g, '')
           .replace(/</g, '')
           .replace(/>/g, '')
-          .replace(/%/g, '')
-          .replace(/;/g, '')
-          .replace(/(/g, '')
-          .replace(/)/g, '')
-          .replace(/+/g, '')
-          .replace(/-/g, '');
+          .replace(/\%/g, '')
+          .replace(/\;/g, '')
+          .replace(/\(/g, '')
+          .replace(/\)/g, '')
+          .replace(/\+/g, '')
+          .replace(/\-/g, '');
        } 
     };
 

@@ -73,7 +73,6 @@
     "safeUrl",
     "unSafeUrl",
     "reverseEscape",
-    "strictReverseEscape",
     "removeStrictUnsafe"
   ],
   "license": "ISC",
@@ -94,5 +93,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.7"
+  "version": "0.0.9"
 }
