@@ -71,7 +71,10 @@
     "unescape",
     "removeUnsafe",
     "safeUrl",
-    "unSafeUrl"
+    "unSafeUrl",
+    "reverseEscape",
+    "strictReverseEscape",
+    "removeStrictUnsafe"
   ],
   "license": "ISC",
   "main": "index.js",
@@ -84,6 +87,10 @@
   "name": "xssescape",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandragithub/xssescape.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

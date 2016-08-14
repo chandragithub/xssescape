@@ -45,15 +45,16 @@ var xssescape = (function ()
           .replace(/</g, '&lt;')
           .replace(/>/g, '&gt;')
           .replace(/%/g, '&#37;')
-          .replace(/;/g, '&#59')
+          .replace(/;/g, '&#59;')
           .replace(/(/g, '&#40;')
           .replace(/)/g, '&#41;')
           .replace(/+/g, '&#43;')
           .replace(/-/g, '&#45;');
        } 
-    }
+    };
     
-    xssescape.unescape = function(htmlStr) 
+    
+    xssescape.reverseEscape = function(htmlStr) 
     {
       if (str === undefined) 
       {
@@ -66,7 +67,25 @@ var xssescape = (function ()
           .replace(/&quot;/g, '"')
           .replace(/&#39;/g, "'")
           .replace(/&lt;/g, '<')
-          .replace(/&gt;/g, '>');
+          .replace(/&gt;/g, '>')
+          .replace(/&#37;/g, '%')
+          .replace(/&#59;/g, ';')
+          .replace(/&#40;/g, '(')
+          .replace(/&#41;/g, ')')
+          .replace(/&#43;/g, '+')
+          .replace(/&#45;/g, '-');
+      }
+    };
+    
+    xssescape.unescape = function(htmlStr) 
+    {
+      if (str === undefined) 
+      {
+          return null;
+      }
+      else
+      {
+         return htmlStr;
       }
 
     };
@@ -86,6 +105,29 @@ var xssescape = (function ()
           .replace(/</g, '')
           .replace(/>/g, '');
        }
+    };
+    
+    xssescape.removeStrictUnsafe = function()
+    {
+        if (str === undefined) 
+       {
+          return null;
+       }
+       else
+       {
+        return String(htmlStr)
+          .replace(/&/g, '')
+          .replace(/"/g, '')
+          .replace(/'/g, '')
+          .replace(/</g, '')
+          .replace(/>/g, '')
+          .replace(/%/g, '')
+          .replace(/;/g, '')
+          .replace(/(/g, '')
+          .replace(/)/g, '')
+          .replace(/+/g, '')
+          .replace(/-/g, '');
+       } 
     };
 
     xssescape.safeUrl = function()
