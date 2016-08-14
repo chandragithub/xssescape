@@ -14,34 +14,37 @@ CONTACT: http://randomrise.com
    Cross-site scripting (XSS) is a code injection attack that allows an attacker to execute malicious JavaScript in another user's browser
 
 ### Types of XSS attack?
-    - Persistent XSS
-      where the malicious string originates from the website's database.
-    - Reflected XSS
-      where the malicious string originates from the victim's request.
-    - DOM-based XSS
-      where the vulnerability is in the client-side code rather than the server-side code.
+
+      -  Persistent XSS
+         where the malicious string originates from the website's database.
+      
+      -  Reflected XSS
+         where the malicious string originates from the victim's request.
+      
+      -  DOM-based XSS
+         where the vulnerability is in the client-side code rather than the server-side code.
 
 
 ## Prevention Method:
 
-1 @param: unSafeHtmlString
-   escape(param) {};
+    - @param: unSafeHtmlString
+      escape(param) {};
 
-2 @param: unSafeHtmlString
-   strictEsacpe(param) {};
+    - @param: unSafeHtmlString
+      strictEsacpe(param) {};
 
-3 @param: safeHtmlString
-   reverseEscape(param) {};
+    - @param: safeHtmlString
+      reverseEscape(param) {};
 
-4 @param: safeHtmlString
-   unescape(param) {};
+    - @param: safeHtmlString
+      unescape(param) {};
 
-5 @param: unSafeHtmlString
-   removeUnsafe(param) {};
+    - @param: unSafeHtmlString
+      removeUnsafe(param) {};
 
-6 safeUrl() {};
+    - safeUrl() {};
 
-7 unSafeUrl() {};
+    - unSafeUrl() {};
 
 
 ## Installation
@@ -57,7 +60,7 @@ var xs = require('xssescape')
 ```
 
 ## Usage.
-### If you want to convert unSafeHtml String to safeHtml String through Sanitize (escape html characters)
+### escape
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
@@ -66,25 +69,25 @@ var xs = require('xssescape')
    // output: "&lt;script&gt alert(document.cookie); &lt/script&gt"
 ```
 
-### If you want strict convertion.
+### strictEsacpe
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
-   xs.escape(htmlStr);
+   xs.strictEsacpe(htmlStr);
    
    // output: "&lt;script&gt alert&#40;document.cookie&#41;&#59; &lt/script&gt"
 ```
 
-### If you want to convert safeHtml String to UnsafeHtml String.
+### reverseEscape
 
 ```js
    var htmlStr = "&lt;script&gt alert&#40;document.cookie&#41;&#59; &lt/script&gt";
-   xs.escape(htmlStr);
+   xs.reverseEscape(htmlStr);
    
    // output: "<script> alert(document.cookie); </script>"
 ```
 
-### If you want to send string as it is (unsafeHtml String)
+### unescape
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
@@ -93,7 +96,7 @@ var xs = require('xssescape')
    // output: "<script> alert(document.cookie); </script>"
 ```
 
-### If you want to remove unsafeHtml String
+### removeUnsafe
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
@@ -102,7 +105,7 @@ var xs = require('xssescape')
    // output: "script alert(document.cookie); /script"
 ```
 
-### If you want to remove strictly all unsafe string
+### removeStrictUnsafe
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
@@ -111,7 +114,7 @@ var xs = require('xssescape')
    // output: "script alertdocument.cookie /script"
 ```
 
-### If you want to check for safe url,
+### safeUrl
  
 ```js
    var url = "http://randomrise.com/?<script> document.cookie </script>";
@@ -120,7 +123,7 @@ var xs = require('xssescape')
    // it will reload/refresh the page without search parameter.
 ```
 
-### If you want to do nothing with url,
+### unSafeUrl
  
 ```js
    var url = "http://randomrise.com/?<script> document.cookie </script>";
