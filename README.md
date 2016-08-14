@@ -7,7 +7,7 @@
       @author: ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
       @github: https://github.com/chandragithub/xssescape
       @date: 13/08/2016
-      @version: 0.0.9 (beta)
+      @version: 0.0.10 (beta)
  
 ## Description: 
    It prevents cross site scripting (xss) attacts across the browser.
@@ -32,7 +32,7 @@
       escape(param) {};
 
     - @param: unSafeHtmlString
-      strictEsacpe(param) {};
+      strictEscape(param) {};
 
     - @param: safeHtmlString
       reverseEscape(param) {};
@@ -70,11 +70,11 @@ var xs = require('xssescape')
    // output: "&lt;script&gt alert(document.cookie); &lt/script&gt"
 ```
 
-### strictEsacpe
+### strictEscape
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
-   xs.strictEsacpe(htmlStr);
+   xs.strictEscape(htmlStr);
    
    // output: "&lt;script&gt alert&#40;document.cookie&#41;&#59; &lt/script&gt"
 ```

@@ -6,7 +6,7 @@
  *
  * @author ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
  * @date 13/08/2016
- * @version 0.0.9 (beta)
+ * @version 0.0.10 (beta)
  */
 
 var xssescape = (function () 
@@ -30,7 +30,7 @@ var xssescape = (function ()
       }
     };
     
-    xssescape.strictEsacpe = function(htmlStr)
+    xssescape.strictEscape = function(htmlStr)
     {
        if (htmlStr === undefined) 
        {
