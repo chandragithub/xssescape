@@ -27,7 +27,9 @@ In addition to negotiator, it allows:
 - 4. removeUnsafe(param)
 - 5. safeUrl()
 - 6. unSafeUrl()
-- 7. Updating...
+- 7. Updating
+
+
 ## Installation
 
 ```sh
