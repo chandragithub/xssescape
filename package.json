@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "xssescape",
+        "scope": null,
+        "escapedName": "xssescape",
+        "name": "xssescape",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\testingNodeModuleApp"
+    ]
+  ],
+  "_from": "xssescape@latest",
+  "_id": "xssescape@0.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/xssescape",
+  "_nodeVersion": "6.3.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/xssescape-0.0.1.tgz_1470942607116_0.9998090737499297"
+  },
+  "_npmUser": {
+    "name": "chandrashekherpolimera",
+    "email": "randomrise@hotmail.com"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "xssescape",
+    "scope": null,
+    "escapedName": "xssescape",
+    "name": "xssescape",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/xssescape/-/xssescape-0.0.1.tgz",
+  "_shasum": "ea5a1b43d03eea5c4962e153abc5008a5896c8d1",
+  "_shrinkwrap": null,
+  "_spec": "xssescape",
+  "_where": "E:\\testingNodeModuleApp",
+  "author": {
+    "name": "chandra shekher Polimera",
+    "email": "chandrashekher@hotmail.com",
+    "url": "http://randomrise.com"
+  },
+  "dependencies": {
+  },
+  "description": "xssescape is used for preventing XSS attack.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "ea5a1b43d03eea5c4962e153abc5008a5896c8d1",
+    "tarball": "https://registry.npmjs.org/xssescape/-/xssescape-0.0.1.tgz"
+  },
+  "files": [
+  "README.md",
+  "index.js"
+  ],
+  "keywords": [
+    "xssescape",
+    "escape",
+    "strictEsacpe",
+    "unescape",
+    "removeUnsafe",
+    "safeUrl",
+    "unSafeUrl"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "chandrashekherpolimera",
+      "email": "randomrise@hotmail.com"
+    }
+  ],
+  "name": "xssescape",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.5"
+}
