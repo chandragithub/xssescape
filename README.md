@@ -57,7 +57,7 @@ var xs = require('xssescape')
 ```
 
 ## Usage.
-### If you want to convert unSafeHtml Stringto safeHtml String through Sanitize (escape html characters)
+### If you want to convert unSafeHtml String to safeHtml String through Sanitize (escape html characters)
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
