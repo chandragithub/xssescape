@@ -66,7 +66,7 @@ var xs = require('xssescape')
    // output: "&lt;script&gt alert(document.cookie); &lt/script&gt"
 ```
 
-### If you want strict converting of unSafe Html Character than use strictEsacpe(param)
+### If you want strict convertion.
 
 ```js
    var htmlStr = "<script> alert(document.cookie); </script>";
