@@ -126,5 +126,5 @@ var xs = require('xssescape')
    var url = "http://randomrise.com/?<script> document.cookie </script>";
    xs.unSafeUrl(url);
    
-   // it will reload/refresh the page search parameter.
+   // it will reload/refresh the page  with search parameter.
 ```
