@@ -11,29 +11,17 @@
         "type": "tag"
       },
       "E:\\testingNodeModuleApp"
-    ],
-    [
-      {
-        "raw": "xssescape",
-        "scope": null,
-        "escapedName": "xssescape",
-        "name": "xssescape",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "E:\\customNode_modules\\node_modules\\niew"
     ]
   ],
-  "_from": "xssescape",
-  "_id": "xssescape@0.0.6",
+  "_from": "xssescape@latest",
+  "_id": "xssescape@0.0.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/xssescape",
   "_nodeVersion": "6.3.0",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/xssescape-0.0.6.tgz_1471161471734_0.732109751785174"
+    "tmp": "tmp/xssescape-0.0.1.tgz_1470942607116_0.9998090737499297"
   },
   "_npmUser": {
     "name": "chandrashekherpolimera",
@@ -51,35 +39,31 @@
     "type": "tag"
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/xssescape/-/xssescape-0.0.6.tgz",
-  "_shasum": "2a8dc8289b6238550d397ed5715f1b8756401cd0",
+  "_resolved": "https://registry.npmjs.org/xssescape/-/xssescape-0.0.1.tgz",
+  "_shasum": "ea5a1b43d03eea5c4962e153abc5008a5896c8d1",
   "_shrinkwrap": null,
   "_spec": "xssescape",
-  "_where": "E:\\customNode_modules\\node_modules\\niew",
+  "_where": "E:\\testingNodeModuleApp",
   "author": {
-    "name": "chandra shekher Polimera",
-    "email": "chandrashekher@hotmail.com",
+    "name": "ChandraShekher Polimera",
+    "email": "chandrashekher@tecie.com",
     "url": "http://randomrise.com"
   },
-  "bugs": {
-    "url": "https://github.com/chandragithub/xssescape/issues"
+  "dependencies": {
   },
-  "dependencies": {},
-  "description": "xssescape is used for preventing XSS attack.",
+  "description": "xssescape is used for preventing XSS attack across all browsers",
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "2a8dc8289b6238550d397ed5715f1b8756401cd0",
-    "tarball": "https://registry.npmjs.org/xssescape/-/xssescape-0.0.6.tgz"
+    "shasum": "ea5a1b43d03eea5c4962e153abc5008a5896c8d1",
+    "tarball": "https://registry.npmjs.org/xssescape/-/xssescape-0.0.1.tgz"
   },
   "files": [
-    "README.md",
-    "index.js"
+  "README.md",
+  "index.js"
   ],
-  "homepage": "https://github.com/chandragithub/xssescape#readme",
   "keywords": [
     "xssescape",
     "escape",
@@ -102,7 +86,7 @@
   ],
   "name": "xssescape",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
+  "readme": "For ReadMe.md file visit my Github",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chandragithub/xssescape.git"
@@ -110,5 +94,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.6"
+  "version": "0.0.7"
 }

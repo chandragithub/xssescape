@@ -7,7 +7,7 @@
       @author: ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
       @github: https://github.com/chandragithub/xssescape
       @date: 13/08/2016
-      @version: 0.0.6 (beta)
+      @version: 0.0.7 (beta)
  
 ## Description: 
    It prevents cross site scripting (xss) attacts across the browser.

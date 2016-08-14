@@ -6,7 +6,7 @@
  *
  * @author ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
  * @date 13/08/2016
- * @version 0.0.6 (beta)
+ * @version 0.0.7 (beta)
  */
 
 var xssescape = (function () 
@@ -15,7 +15,7 @@ var xssescape = (function ()
     
     xssescape.escape = function (htmlStr) 
     {
-      if (str === undefined) 
+      if (htmlStr === undefined) 
       {
           return null;
       }
@@ -32,7 +32,7 @@ var xssescape = (function ()
     
     xssescape.strictEsacpe = function(htmlStr)
     {
-       if (str === undefined) 
+       if (htmlStr === undefined) 
        {
           return null;
        }
@@ -56,7 +56,7 @@ var xssescape = (function ()
     
     xssescape.reverseEscape = function(htmlStr) 
     {
-      if (str === undefined) 
+      if (htmlStr === undefined) 
       {
           return null;
       }
@@ -79,7 +79,7 @@ var xssescape = (function ()
     
     xssescape.unescape = function(htmlStr) 
     {
-      if (str === undefined) 
+      if (htmlStr === undefined) 
       {
           return null;
       }
@@ -92,7 +92,7 @@ var xssescape = (function ()
     
     xssescape.removeUnsafe = function(htmlStr)
     {
-       if (str === undefined) 
+       if (htmlStr === undefined) 
        {
           return null;
        }
@@ -109,7 +109,7 @@ var xssescape = (function ()
     
     xssescape.removeStrictUnsafe = function()
     {
-        if (str === undefined) 
+        if (htmlStr === undefined) 
        {
           return null;
        }
@@ -151,10 +151,9 @@ var xssescape = (function ()
         var searchLocation =  location.search;
         location.replace(searchLocation);
     };
-    
-    
-    
+     
     return xssescape;
+    
 }());
 
 if (typeof window === 'undefined') 
