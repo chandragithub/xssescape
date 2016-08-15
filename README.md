@@ -6,8 +6,8 @@
       @contact: http://randomrise.com 
       @author: ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
       @github: https://github.com/chandragithub/xssescape
-      @date: 13/08/2016
-      @version: 0.0.10 (beta)
+      @date: 15/08/2016
+      @version: 0.0.12 (beta)
  
 ## Description: 
    It prevents cross site scripting (xss) attacts across the browser.
@@ -46,7 +46,9 @@
     - safeUrl() {};
 
     - unSafeUrl() {};
-
+    
+    - @param: path name (eg. /home, /web, /mywork)
+      unSafeUrl(param) {};
 
 ## Installation
 
@@ -61,6 +63,7 @@ var xs = require('xssescape')
 ```
 
 ## Usage.
+
 ### escape
 
 ```js
@@ -118,8 +121,8 @@ var xs = require('xssescape')
 ### safeUrl
  
 ```js
-   var url = "http://randomrise.com/?<script> document.cookie </script>";
-   xs.safeUrl(url);
+   var browserURL = "http://randomrise.com/?<script> document.cookie </script>";
+   xs.safeUrl();
    
    // it will reload/refresh the page without search parameter.
 ```
@@ -127,8 +130,17 @@ var xs = require('xssescape')
 ### unSafeUrl
  
 ```js
-   var url = "http://randomrise.com/?<script> document.cookie </script>";
-   xs.unSafeUrl(url);
+   var browserURL = "http://randomrise.com/?<script> document.cookie </script>";
+   xs.unSafeUrl();
    
    // it will reload/refresh the page  with search parameter.
+```
+
+### safeUrlWithHash
+
+```js
+   var browserURL = "http://randomrise.com/?<script> document.cookie </script>";
+   xs.unSafeUrl('/home');   // eg. you can keep what ever you want as a path name.
+    
+   // it will reload/refresh the page  with /home after the default url.
 ```

@@ -1,19 +1,20 @@
 /**
  *  Copyright © http://randomrise.com, as an published work.  All rights reserved.
- *  THIS SOFTWARE OR DATA IS THE PROPERTY OF http://randomrise.com.
- *  THIS SOFTWARE INTENTD TO PROVIDE OPEN SOURCE (FREE TO USE) BUT ANY REPRODUCTION NOT ALLOWED.
- *  CONTACT: http://randomrise.com
- *
- * @author ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
- * @date 13/08/2016
- * @version 0.0.10 (beta)
+ *  This software or data is the property of http://randomrise.com.
+ *  This software is intend to provide open source (FREE TO USE) but any reproduction is not allowed.
+ *  
+ *  @contact: http://randomrise.com
+ *  @author:  ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
+ *  @github:  https://github.com/chandragithub/xssescape.git
+ *  @date:    15/08/2016
+ *  @version: 0.0.12 (beta)
  */
 
-var xssescape = (function () 
+var webSecurity = (function () 
 {
-    var xssescape = {};
+    var webSecurity = {};
     
-    xssescape.escape = function (htmlStr) 
+    webSecurity.escape = function (htmlStr) 
     {
       if (htmlStr === undefined) 
       {
@@ -30,7 +31,7 @@ var xssescape = (function ()
       }
     };
     
-    xssescape.strictEscape = function(htmlStr)
+    webSecurity.strictEscape = function(htmlStr)
     {
        if (htmlStr === undefined) 
        {
@@ -54,7 +55,7 @@ var xssescape = (function ()
     };
     
     
-    xssescape.reverseEscape = function(htmlStr) 
+    webSecurity.reverseEscape = function(htmlStr) 
     {
       if (htmlStr === undefined) 
       {
@@ -77,7 +78,7 @@ var xssescape = (function ()
       }
     };
     
-    xssescape.unescape = function(htmlStr) 
+    webSecurity.unescape = function(htmlStr) 
     {
       if (htmlStr === undefined) 
       {
@@ -90,7 +91,7 @@ var xssescape = (function ()
 
     };
     
-    xssescape.removeUnsafe = function(htmlStr)
+    webSecurity.removeUnsafe = function(htmlStr)
     {
        if (htmlStr === undefined) 
        {
@@ -107,7 +108,7 @@ var xssescape = (function ()
        }
     };
     
-    xssescape.removeStrictUnsafe = function(htmlStr)
+    webSecurity.removeStrictUnsafe = function(htmlStr)
     {
        if (htmlStr === undefined) 
        {
@@ -130,12 +131,12 @@ var xssescape = (function ()
        } 
     };
 
-    xssescape.safeUrl = function()
+    webSecurity.safeUrl = function()
     {
         if(typeof window !== 'undefined')
         {
            var searchLocation =  location.search;
-           var unSafeChar = searchLocation.match(/[script]/g);
+           var unSafeChar = searchLocation.match(/[script|document|cookie]/g);
               
            ((unSafeChar !== null) ? (unSafeChar.length > 0 ? location.replace("/") : "") : "");
              
@@ -146,21 +147,54 @@ var xssescape = (function ()
         }
     };
     
-    xssescape.unSafeUrl = function()
+    webSecurity.safeUrlWithPath = function(path)
+    {
+        if(typeof window !== 'undefined')
+        {
+           var searchLocation =  location.search;
+           var unSafeChar = searchLocation.match(/[script|document|cookie]/g);
+              
+           ((unSafeChar !== null) ? (unSafeChar.length > 0 ? location.replace(path) : "") : "");
+             
+        }
+        else
+        {
+           throw "Node Doesn't Support safeUrl";
+        }
+    };
+    
+    webSecurity.safeUrlWithHash = function(path)
+    {
+        if(typeof window !== 'undefined')
+        {
+           var searchLocation =  location.hash;
+           var unSafeChar = searchLocation.match(/[javascript|script|document|cookie]/g);
+              
+           ((unSafeChar !== null) ? (unSafeChar.length > 0 ? location.replace(path) : "") : "");
+             
+        }
+        else
+        {
+           throw "Node Doesn't Support safeUrl";
+        }
+    };
+    
+    webSecurity.unSafeUrl = function()
     {
         var searchLocation =  location.search;
         location.replace(searchLocation);
     };
      
-    return xssescape;
+    return webSecurity;
     
 }());
 
 if (typeof window === 'undefined') 
 {
-    module.exports = xssescape;
+    module.exports = webSecurity;
 }
 else 
 {
-    window.xssescape = xssescape;
-}
+    window.webSecurity = webSecurity;
+};
+
