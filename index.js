@@ -7,14 +7,14 @@
  *  @author:  ChandraShekher Polimera (linkedin: chandrashekherpolimera | email: chandrashekher@techie.com)
  *  @github:  https://github.com/chandragithub/xssescape.git
  *  @date:    15/08/2016
- *  @version: 0.0.12 (beta)
+ *  @version: 0.0.13 (beta)
  */
 
-var webSecurity = (function () 
+var xssescape = (function () 
 {
-    var webSecurity = {};
+    var xssescape = {};
     
-    webSecurity.escape = function (htmlStr) 
+    xssescape.escape = function (htmlStr) 
     {
       if (htmlStr === undefined) 
       {
@@ -31,7 +31,7 @@ var webSecurity = (function ()
       }
     };
     
-    webSecurity.strictEscape = function(htmlStr)
+    xssescape.strictEscape = function(htmlStr)
     {
        if (htmlStr === undefined) 
        {
@@ -55,7 +55,7 @@ var webSecurity = (function ()
     };
     
     
-    webSecurity.reverseEscape = function(htmlStr) 
+    xssescape.reverseEscape = function(htmlStr) 
     {
       if (htmlStr === undefined) 
       {
@@ -78,7 +78,7 @@ var webSecurity = (function ()
       }
     };
     
-    webSecurity.unescape = function(htmlStr) 
+    xssescape.unescape = function(htmlStr) 
     {
       if (htmlStr === undefined) 
       {
@@ -91,7 +91,7 @@ var webSecurity = (function ()
 
     };
     
-    webSecurity.removeUnsafe = function(htmlStr)
+    xssescape.removeUnsafe = function(htmlStr)
     {
        if (htmlStr === undefined) 
        {
@@ -108,7 +108,7 @@ var webSecurity = (function ()
        }
     };
     
-    webSecurity.removeStrictUnsafe = function(htmlStr)
+    xssescape.removeStrictUnsafe = function(htmlStr)
     {
        if (htmlStr === undefined) 
        {
@@ -131,7 +131,7 @@ var webSecurity = (function ()
        } 
     };
 
-    webSecurity.safeUrl = function()
+    xssescape.safeUrl = function()
     {
         if(typeof window !== 'undefined')
         {
@@ -147,7 +147,7 @@ var webSecurity = (function ()
         }
     };
     
-    webSecurity.safeUrlWithPath = function(path)
+    xssescape.safeUrlWithPath = function(path)
     {
         if(typeof window !== 'undefined')
         {
@@ -163,7 +163,7 @@ var webSecurity = (function ()
         }
     };
     
-    webSecurity.safeUrlWithHash = function(path)
+    xssescape.safeUrlWithHash = function(path)
     {
         if(typeof window !== 'undefined')
         {
@@ -179,22 +179,22 @@ var webSecurity = (function ()
         }
     };
     
-    webSecurity.unSafeUrl = function()
+    xssescape.unSafeUrl = function()
     {
         var searchLocation =  location.search;
         location.replace(searchLocation);
     };
      
-    return webSecurity;
-    
+    return xssescape;
 }());
 
 if (typeof window === 'undefined') 
 {
-    module.exports = webSecurity;
+    module.exports = xssescape;
+    module.exports = xssescape;
 }
 else 
 {
-    window.webSecurity = webSecurity;
+    window.xssescape = xssescape;
 };
 

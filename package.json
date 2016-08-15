@@ -26,7 +26,7 @@
     ]
   ],
   "_from": "xssescape",
-  "_id": "xssescape@0.0.11",
+  "_id": "xssescape@0.0.13",
   "_inCache": true,
   "_installable": true,
   "_location": "/xssescape",
@@ -108,5 +108,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.12"
+  "version": "0.0.13"
 }
